@@ -1,0 +1,237 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+textarea {
+	resize: none;
+}
+
+.body {
+	display: grid;
+	margin: 0;
+	background-color: #e8e8e8;
+	font-family: 'Inter';
+	font-size: 16px;
+}
+
+.section__comments {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 1200px;
+	height: 100vh;
+	justify-self: center;
+	padding: 40px;
+	gap: 20px;
+}
+
+.comments__form {
+	box-sizing: border-box;
+	width: 600px;
+	height: 542px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 40px;
+}
+
+.form__title {
+	margin-bottom: 30px;
+}
+
+input[type='date']:in-range::-webkit-datetime-edit-year-field,
+input[type='date']:in-range::-webkit-datetime-edit-month-field,
+input[type='date']:in-range::-webkit-datetime-edit-day-field,
+input[type='date']:in-range::-webkit-datetime-edit-text {
+	color: transparent;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+	opacity: 0.4;
+}
+
+.form__input {
+	font-family: 'Segoe UI', sans-serif;
+	margin: 16px 0 16px 0;
+	position: relative;
+}
+
+.form__input input,
+textarea {
+	font-family: 'Inter';
+	box-sizing: border-box;
+	font-size: 100%;
+	padding: 12.8px;
+	outline: none;
+	border: 2px solid rgb(200, 200, 200);
+	background-color: transparent;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.form__input label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 12.8px;
+	margin-left: 8px;
+	pointer-events: none;
+	transition: all 0.3s ease;
+	color: rgb(100, 100, 100);
+}
+
+.form__input
+	:is(input:focus, input:valid, textarea:focus, textarea:valid)
+	~ label {
+	transform: translateY(-50%) scale(0.9);
+	margin: 0;
+	margin-left: 25px;
+	padding: 0px 5px 0px 5px;
+	background-color: #ffffff;
+}
+
+.form__input :is(input:focus, input:valid, textarea:focus, textarea:valid) {
+	border-color: rgb(150, 150, 200);
+}
+
+.input__text {
+	height: 200px;
+
+	&::-webkit-scrollbar {
+		width: 20px;
+		border-radius: 50%;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: rgb(150, 150, 200);
+		border-radius: 20px;
+		border: 8px solid rgb(255, 255, 255);
+	}
+}
+
+.form__button {
+	font-family: 'Inter';
+	font-weight: 600;
+	display: inline-block;
+	padding: 12.8px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: rgb(150, 150, 200);
+	background: transparent;
+	cursor: pointer;
+	transition: ease-out 0.1s;
+	border: 2px solid rgb(150, 150, 200);
+	border-radius: 10px;
+}
+
+.form__button:hover {
+	color: white;
+	background-color: rgb(150, 150, 200);
+}
+
+.form__button:active {
+	transform: scale(0.9);
+}
+
+.comments__comment {
+	display: flex;
+	flex-direction: column;
+}
+
+.comment {
+	box-sizing: border-box;
+	max-width: 600px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 30px;
+	margin-bottom: 20px;
+}
+
+.comment__head {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.comment__name {
+	font-weight: 600;
+}
+
+.comment__text {
+	margin-bottom: 20px;
+	word-break: break-all;
+	white-space: pre-wrap;
+}
+
+.comment__buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.comment__nocomments {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 600px;
+	height: 542px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 30px;
+	margin-bottom: 20px;
+}
+
+.like {
+	color: rgb(150, 150, 150);
+	cursor: pointer;
+	&:hover {
+		opacity: .8;
+	}
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.like__active {
+	font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+	color: rgb(255, 92, 92);
+}
+
+.delete {
+	color: rgb(150, 150, 150);
+	cursor: pointer;
+	&:hover {
+		color: rgb(255, 92, 92);
+	}
+}
+
+.alert {
+	&:invalid {
+		animation: shake 0.3s;
+		border-color: rgb(255, 92, 92);
+	}
+}
+
+@keyframes shake {
+	25% {
+		transform: translateX(4px);
+		border-color: rgb(255, 92, 92);
+	}
+	50% {
+		transform: translateX(-4px);
+		border-color: rgb(255, 92, 92);
+	}
+	75% {
+		transform: translateX(4px);
+		border-color: rgb(255, 92, 92);
+	}
+}

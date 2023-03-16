@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./index.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<title>Comments</title>
+	</head>
+	<body class="body">
+		<section class="section__comments">
+			<form class="comments__form">
+				<h1 class="form__title">Оставьте свой комментарий</h1>
+				<div class="form__input">
+					<input
+						class="input__name"
+						type="text"
+						required
+						autocomplete="off"
+						maxlength="25"	
+					/>
+					<label>Имя</label>
+				</div>
+				<div class="form__input">
+					<textarea
+						class="input__text"
+						type="text"
+						required
+						autocomplete="off"
+						maxlength="240"	
+					></textarea>
+					<label>Комментарий</label>
+				</div>
+				<div class="form__input">
+					<input
+						class="input__date"
+						required=""
+						type="date"
+						autocomplete="off"
+					/>
+					<label>Дата</label>
+				</div>
+				<button type="submit" class="form__button">Отправить</button>
+			</form>
+			<div class="comments__comment">
+				<div class="comment__nocomments">
+					<span>Комментариев нет...</span>
+				</div>
+			</div>
+		</section>
+		<script src="/index.js"></script>
+	</body>
+</html>
